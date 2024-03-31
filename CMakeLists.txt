@@ -38,10 +38,16 @@ file(GLOB VOICECHATSERVER_SOURCES_FILES
         log.c
         network_handlers.c
         network_unixselect.c
-        network_win32.c
         voice_channel.c
         voice_socket.c
 )
+
+if(WIN32)
+  file(GLOB VOICECHATSERVER_SOURCES_FILES
+        ${VOICECHATSERVER_SOURCES_FILES}
+        network_win32.c
+  )
+endif()
 
 set(EXECUTABLE_SRCS
       ${VOICECHATSERVER_HEADERS_FILES}

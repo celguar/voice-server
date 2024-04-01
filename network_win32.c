@@ -21,6 +21,7 @@
 #include "network.h"
 #include "log.h"
 
+#ifdef WIN32
 /************************************************************************/
 /* FD -> Struct mapper, windows is stupid like this.                    */
 /************************************************************************/
@@ -476,3 +477,4 @@ void network_get_bandwidth_statistics(float* bwin, float* bwout)
 }
 
 // PHEW!
+#endif

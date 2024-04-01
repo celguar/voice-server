@@ -36,7 +36,7 @@ static void mutex_free(mutex* mut) { DeleteCriticalSection(mut); }
 typedef pthread_mutex_t mutex;
 static void mutex_lock(mutex* mut) { pthread_mutex_lock(mut); }
 static void mutex_unlock(mutex* mut) { pthread_mutex_unlock(mut); }
-void mutex_initialize(mutex* mut);
+static void mutex_initialize(mutex* mut);
 static void mutex_free(mutex* mut) { pthread_mutex_destroy(mut); }
 
 #endif

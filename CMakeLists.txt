@@ -59,9 +59,9 @@ if (UNIX)
 endif ()
 
 set(EXECUTABLE_SRCS
-      ${VOICECHATSERVER_HEADERS_FILES}
-      ${VOICECHATSERVER_SOURCES_FILES}
-   )
+        ${VOICECHATSERVER_SOURCES_FILES}
+        ${VOICECHATSERVER_HEADERS_FILES}
+)
 
 if(WIN32)
   # add resource file to windows build
